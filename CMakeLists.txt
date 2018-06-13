@@ -38,6 +38,13 @@ if(ENABLE_BUILD_VMM)
         DEPENDS eapis
         SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/bfvmm/integration/
     )
+
+		vmm_extension(
+       libvmi_extensions
+       DEPENDS eapis
+       SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/exit_handler/main
+		)
+
 endif()
 
 if(ENABLE_BUILD_TEST)
